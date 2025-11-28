@@ -1,54 +1,144 @@
-# SmartDocs AI - Knowledge Base Agent
+SmartDocs AI — Intelligent Document Assistant
 
-A 2-hour prototype AI agent that allows users to upload PDFs and ask questions about their content.
+A lightweight, fast, and efficient AI-powered document assistant that extracts insights, summarizes PDFs, and provides context-aware question answering — built using Streamlit, Groq LLMs, and Python.
 
-## Features
+🚀 Features
+📤 Document Upload
 
-- 📄 PDF upload and text extraction
-- 🤖 GPT-powered question answering
-- 💬 Chat interface with memory
-- 📝 Citations and relevant text excerpts
-- 🎨 Clean Streamlit UI
-- ☁️ Deployable on Streamlit Cloud
+Upload PDFs of any size
 
-## Tech Stack
+Automatically extracts text and metadata (page count, word count)
 
-- Python 3.8+
-- Streamlit
-- OpenAI (GPT-4o-mini or GPT-4.1-mini)
-- In-memory text chunks (no vector database)
+🔍 Intelligent Parsing & Chunking
 
-## Setup
+Splits documents into optimized chunks
 
-1. Install dependencies:
-```bash
+Enables fast contextual search and retrieval
+
+💬 Smart Chat (Context-Aware Q&A)
+
+Ask any question from the document — the agent responds strictly based on document content, using:
+
+Llama-3.1-8B-Instant (Groq)
+
+Retrieval-enhanced context
+
+Clean, structured responses
+
+📝 Auto-Summary Engine
+
+Generates a multi-paragraph summary
+
+Rewrites summary on demand
+
+Handles long documents efficiently
+
+🔎 Document Search
+
+Search ANY keyword/phrase inside your uploaded PDF:
+
+Highlighted matches
+
+Chunk-based retrieval
+
+Instant response
+
+📊 Insights Panel
+
+Automatically displays:
+
+Total pages
+
+Word count
+
+Chunk count
+
+Estimated reading time
+
+Auto-extracted keywords
+
+🎨 Modern UI
+
+Sidebar navigation
+
+Clean dark theme
+
+Chat-style message bubbles
+
+Smooth and responsive layout
+
+🧠 Tech Stack
+Frontend & App
+
+Streamlit
+
+Custom CSS styling
+
+Python 3.11 (virtual environment)
+
+Backend / AI
+
+Groq LLM API
+
+Model: llama-3.1-8b-instant
+
+Retrieval-augmented prompting
+
+Chunked context injection
+
+Document Processing
+
+PyPDF2
+
+Custom chunking strategy
+
+Regex-based search
+
+🧩 Project Structure
+smartdocs/
+│── app.py                 # Main Streamlit app (UI + Navigation)
+│── chat_engine.py         # AI backend (Groq-based Q&A, summary, keywords)
+│── document_loader.py     # PDF parsing, metadata extraction, chunking
+│── architecture.md        # System architecture (high-level overview)
+│── requirements.txt       # Dependencies
+│── .gitignore             # Prevents env + keys from pushing
+└── README.md              # Project documentation
+
+🔧 Setup Instructions
+1️⃣ Clone the Repository
+git clone https://github.com/nakods03/smartDoc-ai
+cd smartDoc-ai
+
+2️⃣ Create Virtual Environment
+python3.11 -m venv venv
+source venv/bin/activate
+
+3️⃣ Install Dependencies
 pip install -r requirements.txt
-```
 
-2. Set up environment variables:
-```bash
-export OPENAI_API_KEY=your_api_key_here
-```
+4️⃣ Add Your API Key
 
-3. Run the application:
-```bash
+Create a .env file:
+
+GROQ_API_KEY=your_key_here
+
+5️⃣ Run the App
 streamlit run app.py
-```
 
-## Project Structure
+🎯 Why This Project Matters
 
-- `app.py` - Main Streamlit application
-- `document_loader.py` - PDF processing and text extraction
-- `chat_engine.py` - GPT integration and chat logic
-- `requirements.txt` - Python dependencies
-- `architecture.md` - Architecture documentation
+This project demonstrates:
 
-## TODO
+Real-world AI integration
 
-- [ ] Implement PDF text extraction
-- [ ] Build Streamlit UI
-- [ ] Integrate OpenAI GPT API
-- [ ] Add chat memory functionality
-- [ ] Implement citation system
-- [ ] Test and deploy to Streamlit Cloud
+Complete end-to-end product design
 
+Strong understanding of LLM prompting
+
+Structured architecture
+
+Clean, scalable code
+
+Ability to build production-style prototypes FAST
+
+Perfect for AI engineering, software roles, and internship selection demos.
